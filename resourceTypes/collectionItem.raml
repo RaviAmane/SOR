@@ -2,7 +2,7 @@
     description: Entity representing a <<resourcePathName | !singularize>>
     get:
       description: |
-        Get the <<resourcePathName|!singularize>> with <<resourcePathName|!singularize>>Id = {<<resourcePathName|!singularize>>Id}
+        Get the partial or full details of <<resourcePathName|!singularize>> with <<resourcePathName|!singularize>>Id = {<<resourcePathName|!singularize>>Id}.
       responses: 
         200:
           body: 
@@ -24,17 +24,13 @@
               example: { "message" : "The server was unable to complete your request at this time; please try after some time." }
     patch:
       description: |
-        Update the <<resourcePathName|!singularize>> with <<resourcePathName|!singularize>>Id = {<<resourcePathName|!singularize>>Id}
+        Partial update the <<resourcePathName|!singularize>> with <<resourcePathName|!singularize>>Id = {<<resourcePathName|!singularize>>Id}
       body:
         application/json:
           example: |
-            <<exampleItem>>
+            <<examplePartialItem>>
       responses: 
-        200:
-          body: 
-            application/json:
-              example: | 
-                <<exampleItem>>
+        204:
         400:
           body: 
             application/json:

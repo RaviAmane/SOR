@@ -2,7 +2,8 @@
 title: System of Records (SOR) API
 #baseUri: https://example.org/{version}
 #baseUri: https://mocksvc.mulesoft.com/mocks/6360c8c2-7b1b-4456-8e20-2e4d378f5420/{version}
-baseUri: https://mocksvc.mulesoft.com/mocks/4e8e795f-f35e-4475-946d-9134e29ddf98/{version}
+#baseUri: https://mocksvc.mulesoft.com/mocks/4e8e795f-f35e-4475-946d-9134e29ddf98/{version}
+baseUri: https://mocksvc.mulesoft.com/mocks/23b89576-a29e-4920-9735-077c66b3f216/{version}
 version: v1
 
 types:
@@ -23,3 +24,11 @@ resourceTypes:
     type:
       collectionItem:
         exampleItem: !include examples/customer.sample
+        examplePartialItem: !include examples/partial-customer.sample
+    get:
+      queryParameters: 
+        fields:
+          description: Pass the names of fields that need to be returned.
+          enum: [firstName, lastName, addresses, all]
+          default: firstName
+          required: false

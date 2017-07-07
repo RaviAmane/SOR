@@ -1,0 +1,10 @@
+[
+  {
+    "type" : "shipping"
+    "value" : "David's shipping address"
+  },
+  {
+    "type" : "billing",
+    "value" : "David's billing address"
+  }
+]
