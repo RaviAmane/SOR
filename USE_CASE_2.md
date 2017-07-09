@@ -11,7 +11,7 @@ In order to improve the performance for mobile applications, the API uses partia
 
 ## Examples
 
-The following is a series of examples that demonstrate the use of API with various netwrok traffic.
+The following is a series of examples that demonstrates how the use of query parameter and PATCH reduces the network traffice; thus optimizing the mobile applications.
 
 ### 1) Simple GET Request - Receive Full Resource
 
