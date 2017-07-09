@@ -1,6 +1,7 @@
 **API Optimization for Mobile Applications (Efficient Network Usage)**
 ---
-In order to improve the performance for mobile applications, the API uses partial resources.
+In order to improve the performance for mobile applications, the API uses partial resources. Submitting and returning partial resources reduces the network traffic thus optimizing the API for mobile applications.
+
 ### Receive Partial Resource for `HTTP GET` on `/customers/{customerId}`
   - For `HTTP GET` operation, specify the response fields by using `fields` query parameter. This way only the required fields are returned optimizing the network traffic.
 ### Update Only Select Fields with `HTTP PATCH`
