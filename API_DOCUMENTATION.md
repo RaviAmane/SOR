@@ -84,16 +84,3 @@
 	`{
 		"message": "The server was unable to complete your request at this time; please try after some time."
 	}`
-
-* **Sample Call:**
-
-  ```javascript
-    $.ajax({
-      url: "/users/1",
-      dataType: "json",
-      type : "GET",
-      success : function(r) {
-        console.log(r);
-      }
-    });
-  ```
