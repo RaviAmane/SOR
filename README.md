@@ -28,7 +28,7 @@ This API, in its present state, contains a single resource `/customers`. The ope
 
 You can use this project in various ways:
 
-- Use the api.raml (and the subdirectories/files) in your API design.
+- Use the api.raml (and the subdirectories/files) in your API design. This project makes use of RAML features making it easy to extend it to support future resources such as products and orders. For more details see [Use Case 3: Extention of this API to Support Future Resources](USE_CASE_3.md).
 - Create your own Mulefost project by importing api.raml using APIkit.
 - Create an API in API Designer (a part of Mulesoft Anypoint Platform) and import it into your Mulesoft project using APIkit.
 
