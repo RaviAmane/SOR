@@ -1,47 +1,48 @@
-API Optimization for Mobile Applications (Efficient Network Usage)
-
+**API Optimization for Mobile Applications (Efficient Network Usage)**
+---
 In order to improve the performance for mobile applications, the API uses partial resources.
+- **Partial Response for `HTTP GET` on `/customers/{customerId}`.**
+	- For `HTTP GET` operation, specify the response fields by using `fields` query parameter. This way only the required fields are returned optimizing the network traffic.
+- **Update Selected Fields with `HTTP PATCH`**
+	- Use of `HTTP PATCH` operation where only the fields that need changing are sent over the network.
+	- In addition, like GET operation, specify the response fields by using `fields` query parameter. This way only the required fields are returned over the network. No fields are returned if this query parameter is not passed; in that case HTTP code `204` is returned further optimizing the network traffic.
 
-- Partial Response for GET
-	- With GET operation, specify the response fields by using fields query parameter. This way only the required fields are returned over the network.
-- Update Selected Fields with PATCH
-	- Use of PATCH HTTP operation where only the fields that need changing are sent over the network.
-	- In addition, like GET operation, specify the response fields by using fields query parameter. This way only the required fields are returned over the network. No fields are returned if this query parameter is not passed; in this case HTTP code 204 is returned.
-
-Examples:
-
-GET Request:
+**Examples**
 
 The following example shows the use of the fields parameter.
 
-Simple request: This HTTP GET request omits the fields parameter and returns the full resource.
+- **Simple request** This HTTP GET request omits the fields parameter and returns the full resource.
 
-GET /v1/123456
+`GET /v1/customers/123456`
 
-Full resource response: The full resource data includes the following fields.
+For above request that does not send any query parameter, the full resource response is send back that would include the following fields.
 
-  200 OK
-
-  {
-    "id" : 123456,
-    "firstName": "David",
-    "lastName" : "J",
-    "addresses" : [
-      {
-        "type" : "home",
-        "value" : "David's home address"
-      },
-      {
-        "type" : "shipping",
-        "value" : "David's shipping address"
-      },
-      {
-        "type" : "billing",
-        "value" : "David's billing address"
-      }
+  *HTTP Status*
+  
+  `200 OK`
+  
+  *Response Body*
+  
+  `{
+      "id" : 123456,
+      "firstName": "David",
+      "lastName" : "J",
+      "addresses" : [
+        {
+          "type" : "home",
+          "value" : "David's home address"
+        },
+        {
+          "type" : "shipping",
+          "value" : "David's shipping address"
+        },
+        {
+          "type" : "billing",
+          "value" : "David's billing address"
+        }
     ],
     "isDeleted" : false
-  }
+  }`
 
 Request for a partial response: The following request for this same resource uses the fields parameter to significantly reduce the amount of data returned.
 
@@ -58,7 +59,7 @@ Partial response: In response to the above request, the API returns back a respo
 
 PATCH Request:
 
-You can also avoid sending unnecessary data when modifying resources. To send updated data only for the specific fields that you’re changing, use the HTTP PATCH verb.
+You can also avoid sending unnecessary data when modifying resources. To send updated data only for the specific fields that youâ€™re changing, use the HTTP PATCH verb.
 
 The short example below shows how using patch minimizes the data you need to send to make a small update.
 
