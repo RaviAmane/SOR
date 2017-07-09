@@ -29,17 +29,17 @@
    
   **Default**
    
-  `page=0`
+  `0`
 
   Skip over a number of elements by specifying a page value for the query.
 
 **Optional**
    
-  `limit =<<integer>>`
+  `limit=<<integer>>`
    
   **Default**
    
-  `limit=100`
+  `100`
    
   Limit the number of elements in the response.
    
