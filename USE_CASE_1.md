@@ -7,4 +7,4 @@ A consumer may periodically (every 5 minutes) consume the API to enable it (the 
 - The API further provides pagination. in the cases where the customer records updated since the last API call is in great number, the consumer can design their application to make use of pagination.
 - The consumer can always get all the records by passing epoch time - `1970-01-01T00:00:00.090Z` as a value of `If-Modified-Since` request header. However the consumer is advised to keep these calls to minimum (only for the first time or in the event of operational issues).
   - *API Design Consideration: to deter such use of API, we may consider billing the consumer based on the amount of data returned.*
-- For details on HTTP GET on /customers, please refer to the [API Documentation](API_DOCUMENTATION.md).
+- For details on `HTTP GET` on `/customers`, please refer to the [API Documentation](API_DOCUMENTATION.md).
