@@ -52,7 +52,7 @@ This HTTP GET request omits the `fields` query parameter. the API returns the fu
 }
 `
 
-### 2) Optimized GET Request with the use of fields Query Parameters - Receive Partial Resource
+### 2) Optimized GET Request using Query Parameter - Receive Partial Resource
 
 This HTTP GET request adds the `fields` query parameter. The API returns the partial resource.
 
