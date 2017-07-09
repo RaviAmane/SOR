@@ -44,4 +44,4 @@ Detailed commentaries on various use cases of this API are provided at:
 
 - [Use Case 1: Maintain a Copy of Customers Data](USE_CASE_1.md)
 - [Use Case 2: API Usage Optimization for Mobile Applications](USE_CASE_2.md)
-- [Use Case 3: Extention of this API to Support Future Resources](USE_CASE_3.md)
+- [Use Case 3: Extending the API to Support Future Resources](USE_CASE_3.md)
