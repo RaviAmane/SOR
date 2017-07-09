@@ -10,12 +10,12 @@ This is an example API design using RAML. The implementation of this API using M
 - Important Note: In its current state, this projects includes the API design using RAML.
 - Coming Soon: I am working on implementing this RESTful API in Mulesoft with test stubs for the consumer and provider systems. The implementation will be added to this project soon.
 
-This API, in its present state, contains a single resource `/customers`. The operations allowed on the `/customers` resource include:
+This API, in its present state, contains a single resource `/customers`. The operations allowed on the `/customers` resource are listed below.  For more details see [API Documentation](API_DOCUMENTATION.md).
 
 - List Customers
   - `HTTP GET`
-  - The request must contain `If-Modified-Since` header to specify the datetime. The records updated since this datetime will be returned. For more details see [API Documentation](API_DOCUMENTATION.md).
-  - This operation supports pagination.
+  - The request must contain `If-Modified-Since` header to specify the datetime. The records updated since this datetime will be returned.
+  - In addition to the request header `If-Modified-Since` to obtain only a subset of customers, this operation supports pagination. For more details see [Use Case 1: Maintain a Copy of Customers Data](USE_CASE_1.md).
 - Create a New Customer
   - `HTTP POST`
 - Update a Customer
