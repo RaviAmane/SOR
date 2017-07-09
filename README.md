@@ -19,11 +19,12 @@ This API, in its present state, contains a single resource `/customers`. The ope
 - Create a New Customer
   - `HTTP POST`
 - Update a Customer
-  - Supports both `HTTP PATCH` and `HTTP PUT`
+  - Supports both `HTTP PATCH` and `HTTP PUT`.
+  - `HTTP PATCH` is supported to support the performance optimization needed for mobile applications. For more details see [Use Case 2: API Usage Optimization for Mobile Applications](USE_CASE_2.md)
 - Remove a Customer
   - `HTTP DELETE`
 
-## Getting started
+## Getting Started
 
 You can use this project in various ways:
 
@@ -42,5 +43,5 @@ A detailed API definition is provided at:
 Detailed commentaries on various use cases of this API are provided at:
 
 - [Use Case 1: Maintain a Copy of Customers Data](USE_CASE_1.md)
-- [Use Case 2: API Optimization for Mobile Applications](USE_CASE_2.md)
+- [Use Case 2: API Usage Optimization for Mobile Applications](USE_CASE_2.md)
 - [Use Case 3: Extention of this API to Support Future Resources](USE_CASE_3.md)
