@@ -1,42 +1,40 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "Customer",
-    "description": "A customer from system of records.",
-    "type": "object",
-    "properties": {
-        "id": {
-            "description": "Unique identifier.",
-            "type": "integer"
-        },
-        "firstName": {
-            "description": "First name of the customer.",
-            "type": "string",
-            "minLength": 3
-        },
-        "lastName": {
-            "description": "Last name of the customer.",
-            "type": "string"
-        },
-        "addresses": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string"
-                },
-                "value": {
-                  "type": "string"
-                }
-              }
-            }
-        },
-        "isDeleted": {
-            "description": "A flag to indicate if this customer record is deleted.",
-            "type": "boolean"
-        }
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Customer",
+  "description": "A customer from system of records.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Unique identifier.",
+      "type": "integer"
     },
-
-    "required": ["id", "firstName", "lastName", "addresses", "isDeleted"]
-
+    "firstName": {
+      "description": "First name of the customer.",
+      "type": "string",
+      "minLength": 3
+    },
+    "lastName": {
+      "description": "Last name of the customer.",
+      "type": "string"
+    },
+    "addresses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "isDeleted": {
+      "description": "A flag to indicate if this customer record is deleted.",
+      "type": "boolean"
+    }
+  },
+  "required": ["id", "firstName", "lastName", "addresses", "isDeleted"]
 }

@@ -1,4 +1,5 @@
 #%RAML 1.0
+
 title: System of Records (SOR) API
 #baseUri: https://example.org/{version}
 #baseUri: https://mocksvc.mulesoft.com/mocks/6360c8c2-7b1b-4456-8e20-2e4d378f5420/{version}
@@ -15,20 +16,19 @@ resourceTypes:
   collection: !include resourceTypes/collection.raml
   collectionItem: !include resourceTypes/collectionItem.raml
 
+traits:
+  pageable: !include traits/pageable.raml
+
 /customers:
   type:
     collection:
       exampleCollection: !include examples/customers.sample
       exampleItem: !include examples/customer.sample
+  get:
+    is: [pageable]
   /{customerId}:
     type:
       collectionItem:
         exampleItem: !include examples/customer.sample
         examplePartialItem: !include examples/partial-customer.sample
-    get:
-      queryParameters: 
-        fields:
-          description: Pass the names of fields that need to be returned.
-          enum: [firstName, lastName, addresses, all]
-          default: firstName
-          required: false
+          
