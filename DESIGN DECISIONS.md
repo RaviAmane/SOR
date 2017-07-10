@@ -7,7 +7,7 @@ In order to enable the API consumer to ontain only those customer records that a
 
 As an API designer, it may be tempting to provide a **friendly URL** like `HTTP GET` on `/customers/recentlyUpdated` where the **API would return only the records updated in last 5 minutes.** Indeed with such a friendly URL, the developer experience will be greately enhanced as they won't have to maintain the timestamp. However this option is ridden with data synchronization issues. For instance, if an API call failed (for whatever reasons), the consumer will never have access to the customer records updated during that timeframe. **Thus option of providing a friendly URL was discarded.**
 
-For a detailed discussion calling `HTTP GET` on `/customers`, please see [Use Case 1: Maintain a Copy of Customers Data](USE CASE 1.md).
+For a detailed discussion calling `HTTP GET` on `/customers`, please see [Use Case 1: Maintain a Copy of Customers Data](USE_CASE_1.md).
 
 #### 2) A Case for using `billingAddress` and `shippingAddress` instead of `addresses` in customer object
 For customer object, instead of array of "addresses", I would have prefered to use specific address fields, e.g. `billingAddress` and `shippingAddress`.
